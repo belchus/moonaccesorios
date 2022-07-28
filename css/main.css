@@ -1,0 +1,58 @@
+body header .miheader {
+  font-size: 71px;
+  text-align: center;
+  color: white;
+  padding: 20px; }
+
+body {
+  background-color: #a26faf; }
+  body header .miheader {
+    background-color: #3b1b47;
+    font-family: 'Koulen', cursive; }
+  body header .navbar {
+    background-color: #694577;
+    font-size: 20px;
+    padding: 10px; }
+    body header .navbar .dropdown-menu {
+      background-color: #694577; }
+  body main h2 {
+    font-size: 72px;
+    text-align: center;
+    font-family: 'Koulen', cursive;
+    padding: 20px; }
+  body main div p {
+    text-align: center;
+    padding: 15px;
+    font-size: 25px; }
+  body main .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+    body main .cards .card {
+      width: 650px;
+      height: 350px;
+      margin: 30px;
+      padding: 15px;
+      justify-content: center;
+      background-color: #3b1b47;
+      color: azure; }
+      body main .cards .card img {
+        width: 200px;
+        height: 200px;
+        margin: 30px;
+        justify-content: center; }
+  body main .madredos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+    body main .madredos .hijodos {
+      width: 550px;
+      height: 550px;
+      margin: 15px -5;
+      padding: 20px;
+      justify-content: center; }
+  body .footer {
+    font-size: 17px;
+    background-color: #694577;
+    padding: 15px;
+    text-align: right; }

@@ -1,0 +1,92 @@
+@import "utilities/variables";
+@import "utilities/mixins";
+@import "utilities/extend";
+
+body {
+    background-color: $color1;
+
+    header {
+        .miheader {
+            @extend %miheader;
+            background-color: $color2;
+            font-family: 'Koulen', cursive;
+        
+         
+        }
+
+        .navbar {
+            background-color: $color3;
+            font-size: $medida-parrafo;
+            padding: $medida-parrafo - 10;
+
+            .dropdown-menu {
+                background-color: $color3;
+            }
+        }
+
+    }
+
+    main {
+        h2 {
+            font-size: $medida-subtitulo + 2;
+            text-align: center;
+            font-family: 'Koulen', cursive;
+            padding: $medida-parrafo;
+        }
+
+        div {
+            p {
+                text-align: center;
+                padding: $medida-footer;
+                font-size: $medida-parrafo + 5;
+            }
+
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .card {
+                @include medidas (650px,350px);
+                margin: $medida-parrafo+10;
+                padding: $medida-footer;
+                justify-content: center;
+                background-color: $color2;
+                color: azure;
+
+                img {
+                    width: $medida-imagen - 100 ;
+                    height: $medida-imagen - 100;
+                    margin: $medida-footer*2;
+                    justify-content: center;
+                }
+            }
+        }
+
+        .madredos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .hijodos {
+                width: ($medida-imagen*2-50);
+                height:($medida-imagen*2-50);
+                margin: $medida-footer -5;
+                padding: $medida-parrafo;
+                justify-content: center;
+                
+                  
+            }
+
+        }
+    }
+
+    .footer{
+        font-size: 17px;
+        background-color: $color3;
+        padding: 15px;
+        text-align: right;
+    }
+}
