@@ -13,11 +13,17 @@ body {
         
          
         }
+        #ingreso{
+            text-align: right;
+            color: black;
+            text-decoration: none;
+        }
 
         .navbar {
             background-color: $color3;
             font-size: $medida-parrafo;
             padding: $medida-parrafo - 10;
+
 
             .dropdown-menu {
                 background-color: $color3;
@@ -33,7 +39,16 @@ body {
             font-family: 'Koulen', cursive;
             padding: $medida-parrafo;
         }
-
+        #login{
+            font-size: $medida-subtitulo - 4;
+            text-align: center;
+            font-family: 'Koulen', cursive;
+            padding: $medida-parrafo;
+        }
+.validate{
+    text-align: center;
+    position:relative ;
+}
         div {
             p {
                 text-align: center;
@@ -49,7 +64,7 @@ body {
             justify-content: center;
 
             .card {
-                @include medidas (650px,350px);
+                @include medidas (650px,380px);
                 margin: $medida-parrafo+10;
                 padding: $medida-footer;
                 justify-content: center;

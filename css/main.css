@@ -9,6 +9,10 @@ body {
   body header .miheader {
     background-color: #3b1b47;
     font-family: 'Koulen', cursive; }
+  body header #ingreso {
+    text-align: right;
+    color: black;
+    text-decoration: none; }
   body header .navbar {
     background-color: #694577;
     font-size: 20px;
@@ -20,6 +24,14 @@ body {
     text-align: center;
     font-family: 'Koulen', cursive;
     padding: 20px; }
+  body main #login {
+    font-size: 66px;
+    text-align: center;
+    font-family: 'Koulen', cursive;
+    padding: 20px; }
+  body main .validate {
+    text-align: center;
+    position: relative; }
   body main div p {
     text-align: center;
     padding: 15px;
@@ -30,7 +42,7 @@ body {
     justify-content: center; }
     body main .cards .card {
       width: 650px;
-      height: 350px;
+      height: 380px;
       margin: 30px;
       padding: 15px;
       justify-content: center;
