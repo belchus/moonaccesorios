@@ -45,10 +45,28 @@ body {
             font-family: 'Koulen', cursive;
             padding: $medida-parrafo;
         }
+        .padre{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+         background-color: $color2;
+         text-align: center;
+         margin: 600px;
+         width: 700px;
+          margin-top: 90px;  
 .validate{
+    margin-top: 60px;
     text-align: center;
     position:relative ;
+    width: 600px;
+    justify-content: center;
+
+    #formulario{
+        display: flex;
+        flex-direction: column;
 }
+}
+        }
         div {
             p {
                 text-align: center;

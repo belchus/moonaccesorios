@@ -1,10 +1,10 @@
-let nombredeUsuario = prompt ('Ingresa tu nombre de usuario')
+/*let nombredeUsuario = prompt ('Ingresa tu nombre de usuario')
 if (nombredeUsuario == ''){
     alert("Lo siento no ingresaste nu nombre de usuario.Estas ingresando como invitado")   
 } else {
     alert("Bienvenido a Moon Accesorios " + nombredeUsuario)
 }
-
+*/
 
 const productos =[] 
 
@@ -76,14 +76,16 @@ console.log(sumar(400,390))
 
 
 // getElementsByClassName('className')
-const boton = document.getElementsByClassName('boton')
+const boton = document.getElementById('boton')
 console.log(boton)
 
 boton.innerText = 'Agregar al Carrito'
-boton.style.color = "blue"
+boton.style.color = 'blue'
+
 
 const desc = document.getElementsByClassName('descripcion')
 desc.innerText = 'Agregar al Carrito'
+
 
 let formulario = document.querySelector('#formulario')
 let mensajeError = document.querySelector('.errorFormulario')
@@ -104,15 +106,15 @@ function validar(e){
 
     if(usuario.value.length < 5){
         mensajeError.style.display = 'block'
-        mensajeError.innerText = '* Error! El usuario debe tener mas de 5 caracteres!!'
+        mensajeError.innerText = 'El usuario ingresado no existe'
         mensajeError.style.color = 'red'
     }else{
         mensajeError.style.display = 'none'
     }
     if(!contrasena.value){
         mensajeError.style.display = 'block'
-        mensajeError.innerText = '* Error! la contraseña no puede estar vacia'
+        mensajeError.innerText = 'La contraseña ingresada es incorrecta'
         mensajeError.style.color = 'red'
     }
     
-}
+} 

@@ -29,9 +29,24 @@ body {
     text-align: center;
     font-family: 'Koulen', cursive;
     padding: 20px; }
-  body main .validate {
+  body main .padre {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #3b1b47;
     text-align: center;
-    position: relative; }
+    margin: 600px;
+    width: 700px;
+    margin-top: 90px; }
+    body main .padre .validate {
+      margin-top: 60px;
+      text-align: center;
+      position: relative;
+      width: 600px;
+      justify-content: center; }
+      body main .padre .validate #formulario {
+        display: flex;
+        flex-direction: column; }
   body main div p {
     text-align: center;
     padding: 15px;
