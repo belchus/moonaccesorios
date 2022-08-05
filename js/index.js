@@ -76,15 +76,19 @@ console.log(sumar(400,390))
 
 
 // getElementsByClassName('className')
+
 const boton = document.getElementById('boton')
 console.log(boton)
-
-boton.innerText = 'Agregar al Carrito'
 boton.style.color = 'blue'
-
-
+console.log(boton)
+boton.innerText = 'Agregar al Carrito'
 const desc = document.getElementsByClassName('descripcion')
 desc.innerText = 'Agregar al Carrito'
+
+const title = document.getElementById("title")
+console.log(title)
+title.innerText = 'Seccion de Pulseras'
+
 
 
 let formulario = document.querySelector('#formulario')
@@ -118,3 +122,4 @@ function validar(e){
     }
     
 } 
+
