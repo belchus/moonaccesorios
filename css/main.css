@@ -83,3 +83,52 @@ body {
     background-color: #694577;
     padding: 15px;
     text-align: right; }
+
+    .mother{
+      display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+    }
+
+    .sons{
+      width: 350px;
+      height: 350px;
+      margin: 30px;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .son{
+      width: 600px;
+      height: 600px;
+      margin: 60px;
+      justify-content: center;
+      text-align: center;
+      background-color: #3b1b47;
+      
+
+    }
+
+    svg{
+      width: 10%;
+      height: 10%;
+      font-size: 10px;
+  }
+  svg.unlike{
+      fill: transparent;
+      stroke: black;
+      stroke-width: 30px;
+  }
+  svg.liked{
+      fill: black;
+  }
+  
+  .boton{
+    font-size: 20px;
+  }
+  .nomb{
+color: white;
+font-size: 30px;
+  }
