@@ -90,7 +90,7 @@ function validar(e){
 
 
 
-    if(usuario.value.length < 5){
+   /* if(usuario.value.length < 5){
         mensajeError.style.display = 'block'
         mensajeError.innerText = 'El usuario ingresado no existe'
         mensajeError.style.color = 'red'
@@ -103,8 +103,13 @@ function validar(e){
         mensajeError.style.color = 'red'
     }
     
-} 
+} */
+
+mensajeError.style.color = 'red'
+usuario.value.length < 5?  mensajeError.innerText = 'El usuario ingresado es incorrecto' : mensajeError.style.display = 'none'
+!contrasena.value? mensajeError.innerText = 'La contraseña ingresada es incorrecta' : none
 }
+
 
 let container = document.querySelector('.mother')
 let article = ""
@@ -229,3 +234,4 @@ const masProductos = {
 }
 
 console.log(masProductos)
+}
