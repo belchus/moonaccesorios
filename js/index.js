@@ -183,3 +183,49 @@ function sumar(produ1,produ2){
 //console.log(sumar(400,390))
 
 
+
+    carrito.length == 1 && alert('La compra minima es de 2 unidades') 
+
+    let Pulseras = {
+        nombre: 'Pulsera de perlas',
+        precio: 800,
+        descripcion: 'pulsera de perlas grandes',
+        fechaDePublicacion: '05-02-2020',
+        colordePerlas: {
+            claros: 'beige',
+            pasteles: 'rosa',
+            oscuros:'azul',
+        }
+    }
+
+    let {nombre, precio} = Pulseras
+
+console.log(`El precio de la ${nombre} es de ${precio}`) 
+
+const item = {
+    item_id: 1,
+    item_product_name: 'pulsera de perlas',
+    item_price_unit: 600,
+}
+
+let {item_id: id,
+    item_product_name: productName,
+    item_price_unit: unitPrice } = item
+
+console.log(id)
+console.log(unitPrice)
+
+const desestructurar = ( {nombre, precio} ) => {
+     console.log(nombre, precio)
+ }
+ desestructurar(Pulseras)
+
+
+
+
+
+const masProductos = {
+    ...Pulseras
+}
+
+console.log(masProductos)
