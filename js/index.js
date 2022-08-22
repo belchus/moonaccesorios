@@ -157,9 +157,11 @@ for (svg of svgs){
    carrito.splice(eliminoprod,1)
    let sacaRepetido = document.querySelector(`#id-${shop.id}`)
    resultadosCarrito.removeChild(sacaRepetido)
+   swal("Eliminado del carrito", "", "error");
         } else{
             element.classList.add('liked')
             carrito.push(shop)
+            swal("Agregado al carrito", "", "success");
             resultadosCarrito.innerHTML += `<article class="son" id="id-${shop.id}" >
             <img src="${shop.img}" alt="" class="sons">
             <div class="nomb">
