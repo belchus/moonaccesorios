@@ -125,10 +125,6 @@ body {
       fill: black;
   }
   
-  .boton{
-    font-size: 20px;
- 
-  }
   .nomb{
 color: white;
 font-size: 30px;
@@ -138,3 +134,14 @@ font-size: 30px;
     color: red;
     background-color: white;
   }
+
+  .boton{
+    border: 5px solid #a26faf;
+    border-radius: 10px;
+    padding: 10px ;
+    font-size: .8rem;
+    margin: 12px;
+}
+.boton:hover{
+    background-color:#a26faf;
+}

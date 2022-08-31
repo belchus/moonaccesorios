@@ -1,11 +1,3 @@
-/*let nombredeUsuario = prompt ('Ingresa tu nombre de usuario')
-if (nombredeUsuario == ''){
-    alert("Lo siento no ingresaste nu nombre de usuario.Estas ingresando como invitado")   
-} else {
-    alert("Bienvenido a Moon Accesorios " + nombredeUsuario)
-}
-*/
-
 
 const productos =[] 
 
@@ -17,6 +9,7 @@ this.nombre = nombre
 this.agregadoALista = agregadoALista
 this.img = img
 }
+
 
 const producto1 =new Producto("1","Pulseras","$400","Pulsera Perlas","false","../img/pulsera1.png")
 const producto2 =new Producto("2","Pulseras","$390","Pulsera Fleco","false","../img/pulsera2.jpg")
@@ -135,32 +128,41 @@ fetch("https://my-json-server.typicode.com/belchus/parafetch/db")
 })
 .then((pulseras) =>{
     let mispulseras =pulseras.pulseras
-    console.log(mispulseras)
+    console.log(mispulseras) 
     mispulseras.forEach(puls => {
         const {imgSrc, id, titulo,precio,descripcion} = puls
         article += `<article class="son" >
                     <img src="${imgSrc}" alt="" class="sons">
                     <div class="nomb">
                         <p>${titulo}</p><div class="nomb">
-                        <p>${precio}</p>
                     </div>
-                    </div>
-                    <div class="boton">
-                    <svg id="${id}" class="unlike" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84.02L256 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 .0003 232.4 .0003 190.9L0 190.9z"/></svg>
+                    <div class="boton">Ver detalle</div>
+                                    <input type='hidden' class='info-id' value="${id}"/>
+                                </div>
                     </div>
                 </article>`
                 container.innerHTML += article
-    
+          
 })
 })
+const botonesVerDetalle = document.querySelectorAll('.boton')
+console.log(botonesVerDetalle)
+const popup = document.querySelectorAll('.popupDetalle')
+console.log(popup)
 
+for(verDetalle of botonesVerDetalle){
+    verDetalle.onclick = (e) => {
+       console.log(popup)
+    }
+}
 
-
-let botones = document.querySelectorAll('.boton')
-console.log(botones)
+//let botones = document.querySelectorAll('.boton')
+//console.log(botones)
 let svgs = document.querySelectorAll('svg')
-let recuperoStorage = localStorage.getItem('carrito')
 let resultadosCarrito = document.querySelector('.micarrito')
+let recuperoStorage = sessionStorage.getItem('carrito')
+
+let storage = JSON.parse(recuperoStorage)
 //let carrito = JSON.parse(recuperoStorage)
 //console.log(carrito)
 let carrito = [];
@@ -176,7 +178,7 @@ for (svg of svgs){
         let element = e.target.parentElement
         //element.classList.toggle('liked')
         let id = element.attributes.id.value
-        let shop = productos.find(e => e.id == id)
+        let shop = mispulseras.find(e => e.id == id)
 
         if(carrito.includes(shop)){
    element.classList.remove('liked')
@@ -200,7 +202,7 @@ for (svg of svgs){
 
         
        
- localStorage.setItem('carrito',JSON.stringify(carrito))
+localStorage.setItem('carrito',JSON.stringify(carrito))
 
 
 }
@@ -220,7 +222,7 @@ function sumar(produ1,produ2){
 
     carrito.length == 1 && alert('La compra minima es de 2 unidades') 
 
-    let Pulseras = {
+   /* let Pulseras = {
         nombre: 'Pulsera de perlas',
         precio: 800,
         descripcion: 'pulsera de perlas grandes',
@@ -263,3 +265,4 @@ const masProductos = {
 }
 
 console.log(masProductos)
+*/
