@@ -1,5 +1,4 @@
 
-
 let formulario = document.querySelector('#formulario')
 let mensajeError = document.querySelector('.errorFormulario')
 let contrasena = document.querySelector('input[type="password"]')
@@ -16,28 +15,12 @@ function validar(e){
     let usuario = formArray[0]
     let contrasena = formArray[1]
 
-
-
-   /* if(usuario.value.length < 5){
-        mensajeError.style.display = 'block'
-        mensajeError.innerText = 'El usuario ingresado no existe'
-        mensajeError.style.color = 'red'
-    }else{
-        mensajeError.style.display = 'none'
-    }
-    if(!contrasena.value){
-        mensajeError.style.display = 'block'
-        mensajeError.innerText = 'La contraseña ingresada es incorrecta'
-        mensajeError.style.color = 'red'
-    }
-    
-*/
-
 mensajeError.style.color = 'red'
 usuario.value.length < 5?  mensajeError.innerText = 'El usuario ingresado es incorrecto' : mensajeError.style.display = 'none'
 !contrasena.value? mensajeError.innerText = 'La contraseña ingresada es incorrecta' : none
 }
 }
+
 
 let container = document.querySelector('.mother')
 let article = "" 
@@ -64,19 +47,89 @@ return response.json()
    </article>`
    container.innerHTML += article
       })
-    })
-    
-const botonesVerDetalle = document.querySelectorAll('.boton')
-console.log(botonesVerDetalle)
-const popup = document.querySelectorAll('.popupDetalle')
-console.log(popup)
+      const botones = document.querySelectorAll('.boton')
+      const popup = document.querySelector('.popupDetalle')
+      const closePopup = document.querySelector('.closePopup')
+      console.log(botones)
+      for(verDetalle of botones){
+        verDetalle.onclick = (e) => {
+            popup.classList.remove('d-none')
+            let id = e.target.nextElementSibling.value
+            imprimirDetalle(id, popup)
+            
+        }
+    closePopup.onclick = () => {
+      popup.classList.add('d-none')
+    }
+    function imprimirDetalle(id, insertBox){
+        let aros = Aros[id-21]
+        const {titulo, precio, imgSrc,descripcion} = aros
+        insertBox.innerHTML = `<div>
+                                <div class="closePopup">Salir</div>
+                                <section class="pulsera-detail">
+                                    <div class="imagen">
+                                        <img class="miimagen" src="${imgSrc}" alt="">
+                                    </div>
+                                    <div class="descripcion-detail">
+                                        <h3>${titulo}</h3>
+                                        <p><strong> ${descripcion}</strong></p>
+                                        <p><strong> ${precio}</strong></p>
+                                        <div class="click">
+                                            <span class="less">-</span>
+                                            <span class="resultado">0</span>
+                                            <span class="more">+</span>
+                                        </div>
+                                    <div class="botonCarrito">Agregar al Carrito</div>
+                                    </div>
+                                </section>
+                            </div>`
+                            
+                            
+const closePopup = document.querySelector('.closePopup')
+const more = document.querySelector('.more')
+const less = document.querySelector('.less')
+const resultado = document.querySelector('.resultado')
+const agragarCarrito = document.querySelector('.botonCarrito')
+let contador = 0
+let storage = []
+more.onclick = () => {
+    contador++
+    resultado.innerText = contador
+}
 
-for(verDetalle of botonesVerDetalle){
-    verDetalle.onclick = (e) => {
-       console.log(popup)
+less.onclick = () => {
+    contador--
+    contador = contador < 0 ? 0 : contador
+    resultado.innerText = contador
+}
+
+closePopup.onclick = () => {
+    popup.classList.add('d-none')
+}
+                   
+agragarCarrito.onclick = () => {
+    if(contador != 0){
+        aros.agregadoAlCarrito = contador
+        storage.push(aros)
+        sessionStorage.setItem('carrito', JSON.stringify(storage))
+
+        swal({
+            title: `Agregaste ${aros.agregadoAlCarrito} ${titulo} a tu carrito!`,
+            icon: 'success',
+            confirmButtonText: 'Cool'
+        })
+       
+    }else{
+
     }
 }
 
+    }
+    
+    }
+    })
+    
+/*
 //let botones = document.querySelectorAll('.boton')
 //console.log(botones)
 let svgs = document.querySelectorAll('svg')
@@ -92,7 +145,7 @@ carrito = JSON.parse(recuperoStorage)
 }else{
     MostrarCarrito()
 }
-
+/*
 function MostrarCarrito(){
 for (svg of svgs){
     svg.onclick = (e) => {

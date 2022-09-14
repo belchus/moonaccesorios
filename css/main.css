@@ -17,6 +17,7 @@ body {
     background-color: #694577;
     font-size: 20px;
     padding: 10px; }
+    
     body header .navbar .dropdown-menu {
       background-color: #694577; }
   body main h2 {
@@ -71,13 +72,16 @@ body {
   body main .madredos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; }
+    justify-content: center; 
+    position: relative;}
+ 
     body main .madredos .hijodos {
       width: 550px;
       height: 550px;
       margin: 15px -5;
       padding: 20px;
       justify-content: center; }
+      
   body .footer {
     font-size: 17px;
     background-color: #694577;
@@ -145,3 +149,87 @@ font-size: 30px;
 .boton:hover{
     background-color:#a26faf;
 }
+.popupDetalle>div{
+  background-color:#3b1b47;
+  height: 60%;
+  width: 30%;
+  padding: 20px;
+  margin-left: 650px;
+  border-radius: 10px;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  align-items: center;
+  display: flex;
+    flex-direction: column;
+  z-index: 1;
+}
+
+.mimain{
+  position: absolute;
+  z-index: -1;
+}
+.miimagen{
+  justify-content: center;
+  width: 250px;
+  height: 250px;
+  border: 3px solid black;
+  border-radius: 10px;
+}
+.closePopup{
+  text-align: end;
+  width: 100%;
+}
+.botonCarrito{
+  background-color: #a26faf;
+  margin-top: 20px;
+  font-size: 25px;
+  border-radius: 20px;
+
+}
+.icons{
+  width: 30px;
+  height: 30px;
+  justify-content: end;
+  margin: 10px;
+  padding: 0px;
+  margin-top: 2px;
+  justify-content: end;
+}
+.iconos{
+  display: flex;
+  justify-content: end;
+  margin: 0px;
+
+}
+
+.mifooter{
+position: fixed;
+   left:0px;
+   bottom:0px;
+   height:50px;
+   width:100%;
+   background-color: #694577;
+   color: white;
+   text-align: center;
+   z-index: -1;
+}
+.iconofoot{
+  width: 40px;
+  height: 40px;
+  margin-top:0 ;
+  margin: 10px;
+  margin-bottom: 0%;
+  text-align: center;
+}
+.mifooterdos{
+  position: fixed;
+     left:0px;
+     bottom:0px;
+     height:50px;
+     width:100%;
+     background-color: #694577;
+     color: white;
+     text-align: center;
+  }
