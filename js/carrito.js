@@ -1,5 +1,5 @@
 let recuperoStorage = sessionStorage.getItem('carrito')
-let micarrito = document.querySelector('micarrito')
+let micarrito = document.querySelector('.micarrito')
 let storage = JSON.parse(recuperoStorage)
 console.log(storage)
 
@@ -12,15 +12,12 @@ if (recuperoStorage){
 }
 function MostrarCarrito(storage){
     for (product of storage){
-        const {imgSrc, id, titulo} = product
         micarrito.innerHTML = `<article class="son" >
-        <img src="${imgSrc}" alt="" class="sons">
+        <img src="${product.imgSrc}" alt="" class="sons">
         <div class="nomb">
-            <p>${titulo}</p><div class="nomb">
+            <p>${product.titulo}</p><div class="nomb">
         </div>
-        <div class="boton  boton-${id}">Ver detalle</div>
-                        <input type='hidden' class='info-id' value="${id}"/>
-                    </div>
+        <p><strong> ${product.precio}</strong></p>
         </div>
     </article>`
     }
